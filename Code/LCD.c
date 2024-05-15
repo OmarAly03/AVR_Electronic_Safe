@@ -59,7 +59,7 @@ void LCD_sendString(char* str)
 	while(*str)
 	{
 		LCD_sendData(*str++);
-		_delay_ms(50);
+		_delay_ms(30);
 	}
 }
 
