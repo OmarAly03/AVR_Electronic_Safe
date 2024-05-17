@@ -97,6 +97,7 @@ int main(void){
 				break;
 				
 				case '2':
+					wifiCondition = 1;
 					LCD_Clear();
 					LCD_setPosition(ROW1, COL3);
 					LCD_sendString("Waiting...");
@@ -122,6 +123,7 @@ int main(void){
 									command = '\0';
 									wifiCondition = 0;
 									byPassLock = 1;
+									unlocked = 0;
 									_delay_ms(1000);
 									break;
 								}
@@ -141,11 +143,11 @@ int main(void){
 		if(!byPassLock){				
 			if(attempts){
 				LCD_setPosition(ROW2, COL0);
-				LCD_sendString("Press C to Lock");
+				LCD_sendString("Press * to Lock");
 				
 				do{
 					Local_u8Key = KPD_GetPressedKey();
-				} while(Local_u8Key != 'C');
+				} while(Local_u8Key != '*');
 				
 				LCD_Clear();
 				LCD_setPosition(ROW1, COL4);
@@ -164,7 +166,7 @@ int main(void){
 				LCD_sendString("Wild Button Only!");
 				do{
 					Local_u8Key = KPD_GetPressedKey();
-				} while(Local_u8Key != '=');
+				} while(Local_u8Key != '#');
 				breakCondition = 0;
 				attempts = NOOFATTEMPTS;
 			}
