@@ -28,6 +28,8 @@ This electronic safe project is ideal for applications requiring secure storage 
 https://github.com/OmarAly03/AVR_Electronic_Safe/assets/150297015/76d9a81a-2bcc-4908-a9f0-5b4a7cdc1486
 
 ## Simulation
-https://github.com/OmarAly03/AVR_Electronic_Safe/assets/150297015/a2e27920-3a6b-4c4a-a9bc-fce6f6c55250
+https://github.com/OmarAly03/AVR_Electronic_Safe/assets/150297015/bcbb3909-fb46-4406-9aec-74e17e9bd0eb
+
+
 
 
