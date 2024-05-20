@@ -24,9 +24,9 @@ char keys[ROWS][COLS] = {
 };
 
 void KPD_Init(){
-    ROW1_DDR |= 0x0C; // Set PD2, PD3 as output
-    ROW2_DDR |= 0x30; // Set PB4, PB5 as output
-    COL_DDR &= ~0x0F; // Set PC0, PC1, PC2, PC3 as input
+    ROW1_DDR |= 0x0C; // PD2, PD3 as output
+    ROW2_DDR |= 0x30; // PB4, PB5 as output
+    COL_DDR &= ~0x0F; // PC0, PC1, PC2, PC3 as input
     COL_PORT |= 0x0F; // Enable pull-up resistors on PC0, PC1, PC2, PC3
 }
 

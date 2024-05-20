@@ -29,6 +29,7 @@ int main(void){
 	LCD_Init();
 	KPD_Init();
 	Servo_Init();
+	ServoRotatePositive90();
 	USART_Init();
 	
     while (1){
@@ -119,7 +120,7 @@ int main(void){
 									LCD_Clear();
 									LCD_setPosition(ROW1, COL4);
 									LCD_sendString("LOCKED !");
-									ServoRotateNegative90();
+									ServoRotatePositive90();
 									command = '\0';
 									wifiCondition = 0;
 									byPassLock = 1;
@@ -152,7 +153,7 @@ int main(void){
 				LCD_Clear();
 				LCD_setPosition(ROW1, COL4);
 				LCD_sendString("LOCKED !");
-				ServoRotateNegative90();
+				ServoRotatePositive90();;
 				_delay_ms(1000);
 				breakCondition = 0;
 				attempts = NOOFATTEMPTS;

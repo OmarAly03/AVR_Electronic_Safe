@@ -52,7 +52,6 @@
 #define ROW_NUMBER       4
 #define COL_NUMBER       4
 
-#define KPD_VALUES {{'7', '8', '9', '/'}, {'4', '5', '6', '*'}, {'1', '2', '3', '-'}, {'C', '0', '=', '+'}}
 
 /* Prototypes */
 void KPD_Init();

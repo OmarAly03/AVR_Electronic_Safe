@@ -7,10 +7,11 @@
 
 #define F_CPU 16000000UL
 #include <avr/io.h>
+
 void Servo_Init(){
-	DDRB |= (1<<PORTB1);	/* Make OC1A pin as output */
-	TCNT1 = 0;				/* Set timer1 count zero */
-	ICR1 = 4999;			/* Set TOP count for timer1 in ICR1 register */
+	DDRB |= (1<<PORTB1);	/* OC1A pin as output */
+	TCNT1 = 0;				/* Timer1 count zero */
+	ICR1 = 4999;			/* TOP count for timer1 in ICR1 register */
 
 	/* Set Fast PWM, TOP in ICR1, Clear OC1A on compare match, clk/64 */
 	TCCR1A = (1<<WGM11)|(1<<COM1A1);
@@ -18,15 +19,15 @@ void Servo_Init(){
 }
 
 void ServoRotateNegative90(){
-	OCR1A = 249;
+	OCR1A = 150; // 249
 }
 
 void ServoRotateZero(){
-	OCR1A = 374;
+	OCR1A = 300; // 374
 }
 
 void ServoRotatePositive90(){
-	OCR1A = 499;
+	OCR1A = 580; // 499
 }
 
 void LockSafe(){

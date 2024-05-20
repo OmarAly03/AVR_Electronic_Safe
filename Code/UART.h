@@ -13,6 +13,4 @@
 void USART_Init(void);
 unsigned char USART_Receive(void);
 
-
-
 #endif /* UART_H_ */
